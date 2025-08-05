@@ -1,6 +1,6 @@
 <?php
 
-return [
+return array(
 
     /*
     |--------------------------------------------------------------------------
@@ -47,9 +47,9 @@ return [
     |
     */
 
-    'google_fonts' => [
+    'google_fonts' => array(
         'allowed' => true,
-    ],
+    ),
 
     /*
     |--------------------------------------------------------------------------
@@ -83,16 +83,16 @@ return [
     |
     */
 
-    'auth_logo' => [
+    'auth_logo' => array(
         'enabled' => false,
-        'img' => [
+        'img' => array(
             'path' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
             'alt' => 'Auth Logo',
             'class' => '',
             'width' => 50,
             'height' => 50,
-        ],
-    ],
+        ),
+    ),
 
     /*
     |--------------------------------------------------------------------------
@@ -109,17 +109,17 @@ return [
     |
     */
 
-    'preloader' => [
+    'preloader' => array(
         'enabled' => true,
         'mode' => 'fullscreen',
-        'img' => [
+        'img' => array(
             'path' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
             'alt' => 'AdminLTE Preloader Image',
             'effect' => 'animation__shake',
             'width' => 60,
             'height' => 60,
-        ],
-    ],
+        ),
+    ),
 
     /*
     |--------------------------------------------------------------------------
@@ -298,101 +298,101 @@ return [
     |
     */
 
-    'menu' => [
+    'menu' => array(
         // Navbar items:
-        [
+        array(
             'type' => 'navbar-search',
             'text' => 'search',
             'topnav_right' => true,
-        ],
-        [
+        ),
+        array(
             'type' => 'fullscreen-widget',
             'topnav_right' => true,
-        ],
+        ),
 
         // Sidebar items:
-        [
+        array(
             'type' => 'sidebar-menu-search',
             'text' => 'search',
-        ],
-        [
+        ),
+        array(
             'text' => 'blog',
             'url' => 'admin/blog',
             'can' => 'manage-blog',
-        ],
-        [
+        ),
+        array(
             'text' => 'pages',
             'url' => 'admin/pages',
             'icon' => 'far fa-fw fa-file',
             'label' => 4,
             'label_color' => 'success',
-        ],
-        ['header' => 'account_settings'],
-        [
+        ),
+        array('header' => 'account_settings'),
+        array(
             'text' => 'profile',
             'url' => 'admin/settings',
             'icon' => 'fas fa-fw fa-user',
-        ],
-        [
+        ),
+        array(
             'text' => 'change_password',
             'url' => 'admin/settings',
             'icon' => 'fas fa-fw fa-lock',
-        ],
-        [
+        ),
+        array(
             'text' => 'multilevel',
             'icon' => 'fas fa-fw fa-share',
-            'submenu' => [
-                [
+            'submenu' => array(
+                array(
                     'text' => 'level_one',
                     'url' => '#',
-                ],
-                [
+                ),
+                array(
                     'text' => 'level_one',
                     'url' => '#',
-                    'submenu' => [
-                        [
+                    'submenu' => array(
+                        array(
                             'text' => 'level_two',
                             'url' => '#',
-                        ],
-                        [
+                        ),
+                        array(
                             'text' => 'level_two',
                             'url' => '#',
-                            'submenu' => [
-                                [
+                            'submenu' => array(
+                                array(
                                     'text' => 'level_three',
                                     'url' => '#',
-                                ],
-                                [
+                                ),
+                                array(
                                     'text' => 'level_three',
                                     'url' => '#',
-                                ],
-                            ],
-                        ],
-                    ],
-                ],
-                [
+                                ),
+                            ),
+                        ),
+                    ),
+                ),
+                array(
                     'text' => 'level_one',
                     'url' => '#',
-                ],
-            ],
-        ],
-        ['header' => 'labels'],
-        [
+                ),
+            ),
+        ),
+        array('header' => 'labels'),
+        array(
             'text' => 'important',
             'icon_color' => 'red',
             'url' => '#',
-        ],
-        [
+        ),
+        array(
             'text' => 'warning',
             'icon_color' => 'yellow',
             'url' => '#',
-        ],
-        [
+        ),
+        array(
             'text' => 'information',
             'icon_color' => 'cyan',
             'url' => '#',
-        ],
-    ],
+        ),
+    ),
 
     /*
     |--------------------------------------------------------------------------
@@ -406,7 +406,7 @@ return [
     |
     */
 
-    'filters' => [
+    'filters' => array(
         JeroenNoten\LaravelAdminLte\Menu\Filters\GateFilter::class,
         JeroenNoten\LaravelAdminLte\Menu\Filters\HrefFilter::class,
         JeroenNoten\LaravelAdminLte\Menu\Filters\SearchFilter::class,
@@ -414,7 +414,7 @@ return [
         JeroenNoten\LaravelAdminLte\Menu\Filters\ClassesFilter::class,
         JeroenNoten\LaravelAdminLte\Menu\Filters\LangFilter::class,
         JeroenNoten\LaravelAdminLte\Menu\Filters\DataFilter::class,
-    ],
+    ),
 
     /*
     |--------------------------------------------------------------------------
@@ -428,78 +428,78 @@ return [
     |
     */
 
-    'plugins' => [
-        'Datatables' => [
+    'plugins' => array(
+        'Datatables' => array(
             'active' => false,
-            'files' => [
-                [
+            'files' => array(
+                array(
                     'type' => 'js',
                     'asset' => false,
                     'location' => '//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js',
-                ],
-                [
+                ),
+                array(
                     'type' => 'js',
                     'asset' => false,
                     'location' => '//cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js',
-                ],
-                [
+                ),
+                array(
                     'type' => 'css',
                     'asset' => false,
                     'location' => '//cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css',
-                ],
-            ],
-        ],
-        'Select2' => [
+                ),
+            ),
+        ),
+        'Select2' => array(
             'active' => false,
-            'files' => [
-                [
+            'files' => array(
+                array(
                     'type' => 'js',
                     'asset' => false,
                     'location' => '//cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js',
-                ],
-                [
+                ),
+                array(
                     'type' => 'css',
                     'asset' => false,
                     'location' => '//cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.css',
-                ],
-            ],
-        ],
-        'Chartjs' => [
+                ),
+            ),
+        ),
+        'Chartjs' => array(
             'active' => false,
-            'files' => [
-                [
+            'files' => array(
+                array(
                     'type' => 'js',
                     'asset' => false,
                     'location' => '//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.bundle.min.js',
-                ],
-            ],
-        ],
-        'Sweetalert2' => [
+                ),
+            ),
+        ),
+        'Sweetalert2' => array(
             'active' => false,
-            'files' => [
-                [
+            'files' => array(
+                array(
                     'type' => 'js',
                     'asset' => false,
                     'location' => '//cdn.jsdelivr.net/npm/sweetalert2@8',
-                ],
-            ],
-        ],
-        'Pace' => [
+                ),
+            ),
+        ),
+        'Pace' => array(
             'active' => false,
-            'files' => [
-                [
+            'files' => array(
+                array(
                     'type' => 'css',
                     'asset' => false,
                     'location' => '//cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/blue/pace-theme-center-radar.min.css',
-                ],
-                [
+                ),
+                array(
                     'type' => 'js',
                     'asset' => false,
                     'location' => '//cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js',
-                ],
-            ],
-        ],
-    ],
+                ),
+            ),
+        ),
+    ),
 
     /*
     |--------------------------------------------------------------------------
@@ -514,25 +514,25 @@ return [
     |
     */
 
-    'iframe' => [
-        'default_tab' => [
+    'iframe' => array(
+        'default_tab' => array(
             'url' => null,
             'title' => null,
-        ],
-        'buttons' => [
+        ),
+        'buttons' => array(
             'close' => true,
             'close_all' => true,
             'close_all_other' => true,
             'scroll_left' => true,
             'scroll_right' => true,
             'fullscreen' => true,
-        ],
-        'options' => [
+        ),
+        'options' => array(
             'loading_screen' => 1000,
             'auto_show_new_tab' => true,
             'use_navbar_items' => true,
-        ],
-    ],
+        ),
+    ),
 
     /*
     |--------------------------------------------------------------------------
@@ -547,4 +547,4 @@ return [
     */
 
     'livewire' => false,
-];
+);
