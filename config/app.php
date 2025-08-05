@@ -1,6 +1,6 @@
 <?php
 
-return array(
+return [
 
     /*
     |--------------------------------------------------------------------------
@@ -99,11 +99,11 @@ return array(
 
     'key' => env('APP_KEY'),
 
-    'previous_keys' => array(
+    'previous_keys' => [
         ...array_filter(
             explode(',', (string) env('APP_PREVIOUS_KEYS', ''))
         ),
-    ),
+    ],
 
     /*
     |--------------------------------------------------------------------------
@@ -118,9 +118,9 @@ return array(
     |
     */
 
-    'maintenance' => array(
+    'maintenance' => [
         'driver' => env('APP_MAINTENANCE_DRIVER', 'file'),
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
-    ),
+    ],
 
-);
+];

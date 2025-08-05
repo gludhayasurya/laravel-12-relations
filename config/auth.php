@@ -1,6 +1,6 @@
 <?php
 
-return array(
+return [
 
     /*
     |--------------------------------------------------------------------------
@@ -13,10 +13,10 @@ return array(
     |
     */
 
-    'defaults' => array(
+    'defaults' => [
         'guard' => env('AUTH_GUARD', 'web'),
         'passwords' => env('AUTH_PASSWORD_BROKER', 'users'),
-    ),
+    ],
 
     /*
     |--------------------------------------------------------------------------
@@ -35,12 +35,12 @@ return array(
     |
     */
 
-    'guards' => array(
-        'web' => array(
+    'guards' => [
+        'web' => [
             'driver' => 'session',
             'provider' => 'users',
-        ),
-    ),
+        ],
+    ],
 
     /*
     |--------------------------------------------------------------------------
@@ -59,17 +59,17 @@ return array(
     |
     */
 
-    'providers' => array(
-        'users' => array(
+    'providers' => [
+        'users' => [
             'driver' => 'eloquent',
             'model' => env('AUTH_MODEL', App\Models\User::class),
-        ),
+        ],
 
         // 'users' => [
         //     'driver' => 'database',
         //     'table' => 'users',
         // ],
-    ),
+    ],
 
     /*
     |--------------------------------------------------------------------------
@@ -90,14 +90,14 @@ return array(
     |
     */
 
-    'passwords' => array(
-        'users' => array(
+    'passwords' => [
+        'users' => [
             'provider' => 'users',
             'table' => env('AUTH_PASSWORD_RESET_TOKEN_TABLE', 'password_reset_tokens'),
             'expire' => 60,
             'throttle' => 60,
-        ),
-    ),
+        ],
+    ],
 
     /*
     |--------------------------------------------------------------------------
@@ -112,4 +112,4 @@ return array(
 
     'password_timeout' => env('AUTH_PASSWORD_TIMEOUT', 10800),
 
-);
+];

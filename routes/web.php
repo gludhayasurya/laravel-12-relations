@@ -11,21 +11,21 @@ Route::get('/', function () {
 
 Route::get('/dashboard', function () {
     return view('dashboard');
-})->middleware(array('auth', 'verified'))->name('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
-    Route::get('/profile', array(ProfileController::class, 'edit'))->name('profile.edit');
-    Route::patch('/profile', array(ProfileController::class, 'update'))->name('profile.update');
-    Route::delete('/profile', array(ProfileController::class, 'destroy'))->name('profile.destroy');
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-    Route::get('/users', array(UserController::class, 'index'))->name('users.index');
+    Route::get('/users', [UserController::class, 'index'])->name('users.index');
 
-    Route::get('/users/{user}', array(UserController::class, 'show'));
-    Route::put('/users/{user}', array(UserController::class, 'update'));
-    Route::delete('/users/{user}', array(UserController::class, 'destroy'));
+    Route::get('/users/{user}', [UserController::class, 'show']);
+    Route::put('/users/{user}', [UserController::class, 'update']);
+    Route::delete('/users/{user}', [UserController::class, 'destroy']);
     // Add user route
 
-    Route::post('/users', array(UserController::class, 'store'))->name('users.store');
+    Route::post('/users', [UserController::class, 'store'])->name('users.store');
 
 });
 

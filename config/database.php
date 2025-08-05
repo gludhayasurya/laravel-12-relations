@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Str;
 
-return array(
+return [
 
     /*
     |--------------------------------------------------------------------------
@@ -29,9 +29,9 @@ return array(
     |
     */
 
-    'connections' => array(
+    'connections' => [
 
-        'sqlite' => array(
+        'sqlite' => [
             'driver' => 'sqlite',
             'url' => env('DB_URL'),
             'database' => env('DB_DATABASE', database_path('database.sqlite')),
@@ -40,9 +40,9 @@ return array(
             'busy_timeout' => null,
             'journal_mode' => null,
             'synchronous' => null,
-        ),
+        ],
 
-        'mysql' => array(
+        'mysql' => [
             'driver' => 'mysql',
             'url' => env('DB_URL'),
             'host' => env('DB_HOST', '127.0.0.1'),
@@ -57,12 +57,12 @@ return array(
             'prefix_indexes' => true,
             'strict' => true,
             'engine' => null,
-            'options' => extension_loaded('pdo_mysql') ? array_filter(array(
+            'options' => extension_loaded('pdo_mysql') ? array_filter([
                 PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
-            )) : array(),
-        ),
+            ]) : [],
+        ],
 
-        'mariadb' => array(
+        'mariadb' => [
             'driver' => 'mariadb',
             'url' => env('DB_URL'),
             'host' => env('DB_HOST', '127.0.0.1'),
@@ -77,12 +77,12 @@ return array(
             'prefix_indexes' => true,
             'strict' => true,
             'engine' => null,
-            'options' => extension_loaded('pdo_mysql') ? array_filter(array(
+            'options' => extension_loaded('pdo_mysql') ? array_filter([
                 PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
-            )) : array(),
-        ),
+            ]) : [],
+        ],
 
-        'pgsql' => array(
+        'pgsql' => [
             'driver' => 'pgsql',
             'url' => env('DB_URL'),
             'host' => env('DB_HOST', '127.0.0.1'),
@@ -95,9 +95,9 @@ return array(
             'prefix_indexes' => true,
             'search_path' => 'public',
             'sslmode' => 'prefer',
-        ),
+        ],
 
-        'sqlsrv' => array(
+        'sqlsrv' => [
             'driver' => 'sqlsrv',
             'url' => env('DB_URL'),
             'host' => env('DB_HOST', 'localhost'),
@@ -110,9 +110,9 @@ return array(
             'prefix_indexes' => true,
             // 'encrypt' => env('DB_ENCRYPT', 'yes'),
             // 'trust_server_certificate' => env('DB_TRUST_SERVER_CERTIFICATE', 'false'),
-        ),
+        ],
 
-    ),
+    ],
 
     /*
     |--------------------------------------------------------------------------
@@ -125,10 +125,10 @@ return array(
     |
     */
 
-    'migrations' => array(
+    'migrations' => [
         'table' => 'migrations',
         'update_date_on_publish' => true,
-    ),
+    ],
 
     /*
     |--------------------------------------------------------------------------
@@ -141,34 +141,34 @@ return array(
     |
     */
 
-    'redis' => array(
+    'redis' => [
 
         'client' => env('REDIS_CLIENT', 'phpredis'),
 
-        'options' => array(
+        'options' => [
             'cluster' => env('REDIS_CLUSTER', 'redis'),
             'prefix' => env('REDIS_PREFIX', Str::slug((string) env('APP_NAME', 'laravel')).'-database-'),
             'persistent' => env('REDIS_PERSISTENT', false),
-        ),
+        ],
 
-        'default' => array(
+        'default' => [
             'url' => env('REDIS_URL'),
             'host' => env('REDIS_HOST', '127.0.0.1'),
             'username' => env('REDIS_USERNAME'),
             'password' => env('REDIS_PASSWORD'),
             'port' => env('REDIS_PORT', '6379'),
             'database' => env('REDIS_DB', '0'),
-        ),
+        ],
 
-        'cache' => array(
+        'cache' => [
             'url' => env('REDIS_URL'),
             'host' => env('REDIS_HOST', '127.0.0.1'),
             'username' => env('REDIS_USERNAME'),
             'password' => env('REDIS_PASSWORD'),
             'port' => env('REDIS_PORT', '6379'),
             'database' => env('REDIS_CACHE_DB', '1'),
-        ),
+        ],
 
-    ),
+    ],
 
-);
+];

@@ -1,5 +1,5 @@
 <?php
 
-return array(
+return [
     App\Providers\AppServiceProvider::class,
-);
+];

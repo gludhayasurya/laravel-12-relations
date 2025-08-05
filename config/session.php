@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Str;
 
-return array(
+return [
 
     /*
     |--------------------------------------------------------------------------
@@ -114,7 +114,7 @@ return array(
     |
     */
 
-    'lottery' => array(2, 100),
+    'lottery' => [2, 100],
 
     /*
     |--------------------------------------------------------------------------
@@ -214,4 +214,4 @@ return array(
 
     'partitioned' => env('SESSION_PARTITIONED_COOKIE', false),
 
-);
+];
